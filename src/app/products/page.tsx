@@ -1,15 +1,41 @@
+import Link from "next/link";
+import GoBackButton from "../components/GoBackButton";
+
 const ProductList = () => {
-    return (
-      <div>
-        <h1>Welcome to ProductList page</h1>
-        <ul>
-          <li>Product 1</li>
-          <li>Product 2</li>
-          <li>Product 3</li>
-        </ul>
-      </div>
-    );
-  };
-  
-  export default ProductList;
-  
+  const products = [
+    {
+      id: 1,
+      title: "Product",
+    },
+    {
+      id: 2,
+      title: "Product",
+    },
+    {
+      id: 3,
+      title: "Product",
+    },
+  ];
+  return (
+    <div>
+      <h1>Welcome to ProductList page</h1>
+      <ul>
+        {products.map(({ id, title }) => (
+          <li key={id}>
+            {id == 3 ? (
+              <Link href={`/products/${id}`} replace>
+                {title} {id}
+              </Link>
+            ) : (
+              <Link href={`/products/${id}`}>
+                {title} {id}
+              </Link>
+            )}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default ProductList;
