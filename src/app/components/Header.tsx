@@ -1,9 +1,7 @@
 'use client'
 
 import Link from "next/link"
-import './styles.scss'
 import { usePathname } from "next/navigation"
-import { title } from "process"
 
 const Header = () => {
 
