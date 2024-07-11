@@ -23,11 +23,11 @@ const ProductList = () => {
         {products.map(({ id, title }) => (
           <li key={id}>
             {id == 3 ? (
-              <Link href={`/products/${id}`} replace>
+              <Link className=" hover:bg-black hover:text-white p-2" href={`/products/${id}`} replace>
                 {title} {id}
               </Link>
             ) : (
-              <Link href={`/products/${id}`}>
+              <Link className=" hover:bg-black hover:text-white p-2" href={`/products/${id}`}>
                 {title} {id}
               </Link>
             )}

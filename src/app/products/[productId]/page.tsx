@@ -11,7 +11,7 @@ export const generateMetadata = ({
 
 const ProductDetails = ({ params: { productId } }: Props) => {
   return <><h1>Product Details of product {productId} </h1>
-  <Link href={'/'}>Home</Link>
+      <Link className=" hover:bg-black p-2 hover:text-white" href={`/products/${productId}/reviews`}>View Reviews</Link>
   </>;
 };
 
