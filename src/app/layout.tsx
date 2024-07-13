@@ -1,7 +1,9 @@
 import { Metadata } from "next"
-import Header from "./components/Header"
 import './globals.css'
-import GoBackButton from "./components/GoBackButton"
+
+import GoBackButton from "@component/GoBackButton"
+import Header from "@component/Header"
+
 
 export const metadata: Metadata = {
   title: {
